@@ -1,28 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const button = document.querySelector(".button");
+for(let i=0;i<30;i++){
 
-    if(button){
-        button.addEventListener("mouseover", () => {
-            button.style.transform = "scale(1.08)";
-        });
+let petal=document.createElement("div");
 
-        button.addEventListener("mouseleave", () => {
-            button.style.transform = "scale(1)";
-        });
-    }
+petal.innerHTML="🌸";
 
-    document.querySelectorAll(".post").forEach(post => {
+petal.style.position="fixed";
+petal.style.left=Math.random()*100+"vw";
+petal.style.top="-50px";
+petal.style.fontSize=(15+Math.random()*20)+"px";
+petal.style.opacity="0.8";
+petal.style.pointerEvents="none";
+petal.style.animation=`fall ${5+Math.random()*8}s linear infinite`;
 
-        post.addEventListener("mouseover", () => {
-            post.style.transform = "translateY(-8px)";
-            post.style.transition = ".3s";
-        });
+petal.style.animationDelay=Math.random()*8+"s";
 
-        post.addEventListener("mouseleave", () => {
-            post.style.transform = "translateY(0)";
-        });
+document.body.appendChild(petal);
 
-    });
+}
 
 });
