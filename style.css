@@ -75,3 +75,14 @@ padding:40px;
 text-align:center;
 background:#fff2f8;
 }
+@keyframes fall{
+
+0%{
+transform:translateY(-50px) rotate(0deg);
+}
+
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+
+}
